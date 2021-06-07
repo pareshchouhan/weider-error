@@ -31,7 +31,7 @@ const { createUndoRedoReducer } = undoRedo({
   allowedActionTypes: [updateTemp.name],
 });
 
-export const reducers = createReducer(
+export const reducers = createUndoRedoReducer(
   initialState,
   produceOn(updateTemp, (state) => {
     state.todos[0] = 1;
